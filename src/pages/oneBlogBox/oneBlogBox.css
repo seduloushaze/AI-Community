@@ -1,0 +1,19 @@
+.oneBlogBox{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100px;
+    width: 100%;
+    background: rgb(34,67,195);
+    background: linear-gradient(40deg, rgba(34,67,195,1) 0%, rgba(170,48,223,1) 100%);
+    /* background-image: url(../../assets/background.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover; */
+    font-family: ArcadeClassic;
+    border-radius: 10px;
+    z-index:10;
+    margin: 1.5vh;
+    padding-left: 1vw;
+    color: white;
+}
