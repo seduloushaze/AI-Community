@@ -8,8 +8,8 @@
     /* padding: 1rem; */
     z-index: 4;
     position: relative;
-    
 }
+
 .navbar_heading{
     display:flex;
     width: 55%;
@@ -56,6 +56,12 @@
     color: #fff;
     padding: 0.4rem;
     transition: all 0.3s ease;
+}
+
+.navbar .active{
+    color: #000;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .navbar__link:hover{

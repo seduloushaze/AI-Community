@@ -1,10 +1,10 @@
 import React, { useEffect , useState} from "react";
-import './blogHome.css';
-import OneBlogBox from "./oneBlogBox/oneBlogBox";
+import './blog.css';
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
-export default function BlogHome() {
+export default function Blog() {
 
   const [blogs, setBlogs] = useState([]);
 
@@ -20,16 +20,20 @@ export default function BlogHome() {
     }); 
   } , []);
 
-  const Display = blogs.map((blog) => {
-    return (
-      <OneBlogBox title = { blog.title } authors = { blog.authors } date = {blog.date} />
-    )
-  });
-
   return ( 
-    <div className = "blogHome" >
+    <div className="blog" >
       <div className = "blogsContainer" >
-        { Display}
+        {blogs.map((blog) => {
+          return (
+            <Link to={'/blog/' + blog.id} className="oneBlogBox">
+              <h1>{blog.title}</h1>
+              <div className="cont">
+                <p>{blog.authors}</p>
+                <p>{blog.date}</p>
+              </div>
+            </Link>
+          )
+        })}
       </div>
     </div>
   );

@@ -15,3 +15,7 @@ body {
   font-family: 'ArcadeClassic';
   src: url('./assets/ARCADECLASSIC.TTF') format('truetype');
 }
+
+a{
+  text-decoration: none;
+}
